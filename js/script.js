@@ -4,9 +4,10 @@ var wikiViewer = {
     $("#submitButton").click(wikiViewer.getQuery); // Snags query when input button is pushed
   },
 
-  checkKey: function() {
+  checkKey: function(event) {
     if (event.which == 13) {
-      console.log($("#searchQuery").val());
+      event.preventDefault(); // Prevents page reload
+      wikiViewer.getQuery();
     }
   },
 
