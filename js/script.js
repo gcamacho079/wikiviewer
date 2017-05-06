@@ -12,7 +12,12 @@ var wikiViewer = {
   },
 
   getQuery: function() {
-    console.log($("#searchQuery").val());
+    wikiViewer.buildUrl($("#searchQuery").val())
+  },
+
+  buildUrl: function(value) {
+    var link = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + value + "&format=json";
+    console.log(link);
   }
 }
 
