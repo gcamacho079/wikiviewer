@@ -21,18 +21,18 @@ var wikiViewer = {
       dataType: "json",
       type: "GET",
       success: function(data) {
-        //console.log(data);
         $.each(data[1], function(index, value) {
-          console.log(value + data[2][index] + data[3][index]); // Logs Wiki info using index from first array
-
+          wikiViewer.entryInfo(value, data[3][index], data[2][index]);
         });
       }
-
     }); // End wiki json call*/
   },
 
   entryInfo: function(name, url, article) {
-    //console.log(name + url + article);
+    var title = name;
+    var pageLink = url;
+    var text = article;
+    console.log(title + " " + pageLink + " " + text);
   }
 }
 
