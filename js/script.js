@@ -32,7 +32,7 @@ var wikiViewer = {
     var title = name;
     var pageLink = url;
     var text = article;
-    $("<li><a href='" + pageLink + "'>" + title + "</a></li><p>" + text + "</p>").appendTo("#results");
+    $("<li><a target='_blank' href='" + pageLink + "'>" + title + "</a></li><p>" + text + "</p>").appendTo("#results");
   }
 }
 
