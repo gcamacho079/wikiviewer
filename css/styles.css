@@ -2,6 +2,10 @@ body {
   text-align: center;
 }
 
+ul {
+  -webkit-padding-start: 0px;
+}
+
 li {
   list-style: none;
 }
@@ -14,4 +18,8 @@ h1 {
 p,
 a {
   font-family: 'Roboto', sans-serif;
+}
+
+.result-area {
+  margin: 0 1.5em auto;
 }

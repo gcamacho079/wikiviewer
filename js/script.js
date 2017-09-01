@@ -12,6 +12,7 @@ var wikiViewer = {
   },
 
   fetchAndMake: function() {
+    $("#results").empty();
     var link = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + $("#searchQuery").val() + "&format=json&origin=*";
     wikiViewer.callAPI(link);
   },
@@ -29,10 +30,7 @@ var wikiViewer = {
   },
 
   entryInfo: function(name, url, article) {
-    var title = name;
-    var pageLink = url;
-    var text = article;
-    $("<li><a target='_blank' href='" + pageLink + "'>" + title + "</a></li><p>" + text + "</p>").appendTo("#results");
+    $("<li><a target='_blank' href='" + url + "'>" + name + "</a></li><p>" + article + "</p>").appendTo("#results");
   }
 }
 
