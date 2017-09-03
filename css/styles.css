@@ -24,11 +24,14 @@ li {
 }
 
 input[type=button] {
-  background-color: white;
-  color: #78868A;
   border-radius: 2px;
-  border: 2px solid #78868A;
+  border: 2px solid;
   padding: .5em;
+}
+
+input[type=text]:focus,
+input[type=button]:focus {
+  outline: none;
 }
 
 /**********************************
@@ -55,6 +58,12 @@ COLOR SCHEME
 **********************************/
 h1 {
   color: #78868A;
+}
+
+input[type=button] {
+  background-color: white;
+  color: #78868A;
+  border-color: #78868A;
 }
 
 a,
