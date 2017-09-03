@@ -1,5 +1,9 @@
+/**********************************
+PAGE STYLE
+**********************************/
 body {
   text-align: center;
+  background-color: #ffffff;
 }
 
 ul {
@@ -10,16 +14,62 @@ li {
   list-style: none;
 }
 
-h1 {
-  font-family: 'Alegreya', serif;
-  font-weight: 700;
-}
-
-p,
-a {
-  font-family: 'Roboto', sans-serif;
-}
-
 .result-area {
   margin: 0 1.5em auto;
+}
+
+.entry-card {
+  padding: .5em 1em;
+  margin: 1em auto;
+}
+
+input[type=button] {
+  background-color: white;
+  color: #78868A;
+  border-radius: 2px;
+  border: 2px solid #78868A;
+  padding: .5em;
+}
+
+/**********************************
+TEXT STYLES
+**********************************/
+h1 {
+  font-family: 'Ovo', sans-serif;
+  font-size: 2.5em;
+}
+
+a,
+p {
+  font-family: 'Muli', serif;
+  text-decoration: none;
+}
+
+a.uppercase {
+  text-transform: uppercase;
+}
+
+
+/**********************************
+COLOR SCHEME
+**********************************/
+h1 {
+  color: #78868A;
+}
+
+a,
+p {
+  color: #78868A;
+}
+
+ul li div p {
+  color: #333333;
+}
+
+ul li div a {
+  color: #959BE9;
+}
+
+.entry-card {
+  background-color: #F4F4F4;
 }

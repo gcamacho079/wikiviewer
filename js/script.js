@@ -22,15 +22,24 @@ var wikiViewer = {
       dataType: "json",
       type: "GET",
       success: function(data) {
-        $.each(data[1], function(index, value) {
-          wikiViewer.entryInfo(value, data[3][index], data[2][index]);
-        });
+        if (data[1].length == 0) {
+          wikiViewer.printErrorMessage();
+        }
+        else {
+          $.each(data[1], function(index, value) {
+            wikiViewer.entryInfo(value, data[3][index], data[2][index]);
+          });
+        }
       }
     }); // End wiki json call*/
   },
 
   entryInfo: function(name, url, article) {
-    $("<li><a target='_blank' href='" + url + "'>" + name + "</a></li><p>" + article + "</p>").appendTo("#results");
+    $("<li><div class='entry-card'><b><a target='_blank' class='uppercase' href='" + url + "'>" + name + "</a></b><p>" + article + "</p></li></div>").appendTo("#results").hide().fadeIn(1000);
+  },
+
+  printErrorMessage: function() {
+    $("<p>Sorry, that query doesn't make sense. Please try again.</p>").appendTo("#results");
   }
 }
 
