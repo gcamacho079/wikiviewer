@@ -35,7 +35,7 @@ var wikiViewer = {
   },
 
   entryInfo: function(name, url, article) {
-    $("<li><div class='entry-card'><b><a target='_blank' class='uppercase' href='" + url + "'>" + name + "</a></b><p>" + article + "</p></li></div>").appendTo("#results").hide().fadeIn(1000);
+    $("<li><div class='entry-card'><b><a target='_blank' href='" + url + "'>" + name + "</a></b><p>" + article + "</p></li></div>").appendTo("#results").hide().fadeIn(1000);
   },
 
   printErrorMessage: function() {

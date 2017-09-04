@@ -3,7 +3,6 @@ PAGE STYLE
 **********************************/
 body {
   text-align: center;
-  background-color: #ffffff;
 }
 
 ul {
@@ -19,13 +18,21 @@ li {
 }
 
 .entry-card {
-  padding: .5em 1em;
+  padding: 1em 1em;
   margin: 1em auto;
+  border-radius: 5px;
 }
 
+ul li div p {
+  margin-top: .2em;
+  margin-bottom: 0;
+}
+
+input[type=text],
 input[type=button] {
-  border-radius: 2px;
+  border-radius: 5px;
   border: 2px solid;
+  margin: .5em;
   padding: .5em;
 }
 
@@ -42,33 +49,51 @@ h1 {
   font-size: 2.5em;
 }
 
+button, input, optgroup, select, textarea {
+  font-family: 'Muli', serif;
+}
+
 a,
 p {
   font-family: 'Muli', serif;
   text-decoration: none;
 }
 
-a.uppercase {
-  text-transform: uppercase;
-}
-
-
 /**********************************
 COLOR SCHEME
 **********************************/
+body {
+  background-color: #FFFFFF;
+}
+
 h1 {
   color: #78868A;
 }
 
+input[type=text],
 input[type=button] {
   background-color: white;
   color: #78868A;
   border-color: #78868A;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+input[type=button]:hover {
+  background-color: #959BE9;
+  border-color: #959BE9;
+  color: white;
 }
 
 a,
 p {
   color: #78868A;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+a p:hover {
+  color: #959BE9;
 }
 
 ul li div p {
@@ -77,6 +102,12 @@ ul li div p {
 
 ul li div a {
   color: #959BE9;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+ul li div a:hover {
+  color: #4a4d74;
 }
 
 .entry-card {
