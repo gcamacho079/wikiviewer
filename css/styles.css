@@ -63,6 +63,11 @@ a.thick {
   font-weight: bold;
 }
 
+a:focus {
+  outline-style: none;
+  text-decoration: underline;
+}
+
 /**********************************
 COLOR SCHEME
 **********************************/
@@ -103,7 +108,8 @@ a {
   transition-duration: .5s;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: #959BE9;
 }
 
@@ -117,15 +123,10 @@ ul li div a {
   transition-duration: .5s;
 }
 
-ul li div a:hover {
+ul li div a:hover,
+ul li div a:focus {
   color: #4a4d74;
 }
-
-/* Accessibile styles for link focus states */
-a:focus {
-  outline-color: #392F5A;
-}
-/* End */
 
 .entry-card {
   background-color: #F4F4F4;
