@@ -39,7 +39,7 @@ var wikiViewer = {
   },
 
   printErrorMessage: function() {
-    $("<p>Sorry, that query doesn't make sense. Please try again.</p>").appendTo("#results");
+    $("<div class='entry-card'><p>Sorry, I couldn't find any results for that query. Please try again.</p></div>").appendTo("#results").hide().fadeIn(1000);
   }
 }
 

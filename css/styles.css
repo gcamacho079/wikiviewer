@@ -38,7 +38,7 @@ input[type=button] {
 
 input[type=text]:focus,
 input[type=button]:focus {
-  outline: none;
+  outline-style: none;
 }
 
 /**********************************
@@ -79,20 +79,27 @@ input[type=button] {
   transition-duration: .5s;
 }
 
+/* Accessibile styles for input focus states */
+input[type=text]:focus,
+input[type=button]:focus {
+  background-color: #8CDFD6;
+  outline-color: black;
+}
+
 input[type=button]:hover {
   background-color: #959BE9;
   border-color: #959BE9;
   color: white;
 }
+/* End */
 
-a,
-p {
+a {
   color: #78868A;
   -webkit-transition-duration: .5s;
   transition-duration: .5s;
 }
 
-a p:hover {
+a:hover {
   color: #959BE9;
 }
 
@@ -109,6 +116,12 @@ ul li div a {
 ul li div a:hover {
   color: #4a4d74;
 }
+
+/* Accessibile styles for link focus states */
+a:focus {
+  outline-color: #392F5A;
+}
+/* End */
 
 .entry-card {
   background-color: #F4F4F4;
