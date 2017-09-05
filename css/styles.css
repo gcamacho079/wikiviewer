@@ -59,6 +59,10 @@ p {
   text-decoration: none;
 }
 
+a.thick {
+  font-weight: bold;
+}
+
 /**********************************
 COLOR SCHEME
 **********************************/

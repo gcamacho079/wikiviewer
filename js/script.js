@@ -22,20 +22,21 @@ var wikiViewer = {
       dataType: "json",
       type: "GET",
       success: function(data) {
-        if (data[1].length == 0) {
+        console.log(data);
+        if (data[1].length == 0) { // If the API finds no results, send back error message card
           wikiViewer.printErrorMessage();
         }
         else {
-          $.each(data[1], function(index, value) {
+          $.each(data[1], function(index, value) { // To-do: write code to pull some of article if data[2] is ""
             wikiViewer.entryInfo(value, data[3][index], data[2][index]);
           });
         }
       }
-    }); // End wiki json call*/
+    }); // End wiki json call
   },
 
   entryInfo: function(name, url, article) {
-    $("<li><div class='entry-card'><b><a target='_blank' href='" + url + "'>" + name + "</a></b><p>" + article + "</p></li></div>").appendTo("#results").hide().fadeIn(1000);
+    $("<li><div class='entry-card'><a class='thick' target='_blank' href='" + url + "'>" + name + "</a><p>" + article + "</p></li></div>").appendTo("#results").hide().fadeIn(1000);
   },
 
   printErrorMessage: function() {
